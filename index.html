@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0d1117" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Target Pro" />
+    <title>Таргетолог Pro</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
+    <link rel="apple-touch-icon" href="icon-192.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-icon">◈</span>
+                <span class="logo-text">Target<em>Pro</em></span>
+            </div>
+            <div class="header-actions">
+                <button class="btn-icon" id="searchToggle" aria-label="Пошук">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                </button>
+                <button class="btn-icon" id="bookmarksToggle" aria-label="Закладки">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+                    </svg>
+                    <span class="badge" id="bookmarkBadge" style="display:none">0</span>
+                </button>
+            </div>
+        </div>
+        <div class="search-bar" id="searchBar">
+            <input type="search" id="searchInput" placeholder="Пошук по довіднику..." autocomplete="off" />
+            <button class="search-clear" id="searchClear">✕</button>
+        </div>
+    </header>
+
+    <!-- NAV TABS -->
+    <nav class="nav-tabs" id="navTabs">
+        <button class="tab active" data-section="meta">
+            <span class="tab-icon">◉</span> Meta
+        </button>
+        <button class="tab" data-section="google">
+            <span class="tab-icon">◈</span> Google
+        </button>
+        <button class="tab" data-section="tiktok">
+            <span class="tab-icon">◆</span> TikTok
+        </button>
+        <button class="tab" data-section="metrics">
+            <span class="tab-icon">◇</span> Метрики
+        </button>
+        <button class="tab" data-section="checklists">
+            <span class="tab-icon">▣</span> Чеклісти
+        </button>
+        <button class="tab" data-section="lifehacks">
+            <span class="tab-icon">★</span> Лайфхаки
+        </button>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main" id="mainContent">
+
+        <!-- ===================== META ADS ===================== -->
+        <section class="section active" id="section-meta">
+            <div class="section-header">
+                <h1>Meta Ads</h1>
+                <p>Facebook & Instagram — повний довідник</p>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Структура кампаній</h2>
+
+                <div class="card" data-tags="meta структура кампанія">
+                    <div class="card-head">
+                        <span class="card-icon">🏗️</span>
+                        <h3>Три рівні: Кампанія → Група → Оголошення</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>Кампанія</strong> — визначає ціль (трафік, конверсії, охоплення тощо) і загальний
+                            бюджет.</li>
+                        <li><strong>Група оголошень</strong> — аудиторія, плейсменти, розклад, бюджет групи.</li>
+                        <li><strong>Оголошення</strong> — креатив, текст, заклик до дії (CTA).</li>
+                    </ul>
+                    <div class="tip">💡 Ніколи не змішуй цілі в одній кампанії. Окрема кампанія — окрема ціль.</div>
+                </div>
+
+                <div class="card" data-tags="meta бюджет CBO ABO">
+                    <div class="card-head">
+                        <span class="card-icon">💰</span>
+                        <h3>CBO vs ABO</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>CBO (Campaign Budget Optimization)</strong> — бюджет на рівні кампанії. Алгоритм сам
+                            розподіляє між групами. Краще для масштабування.</li>
+                        <li><strong>ABO (Ad Budget Optimization)</strong> — бюджет на рівні групи. Більший контроль.
+                            Краще для тестування гіпотез.</li>
+                    </ul>
+                    <div class="tip">💡 Тест — ABO з однаковим бюджетом на групу. Масштаб — CBO з перевіреними
+                        аудиторіями.</div>
+                </div>
+
+                <div class="card" data-tags="meta цілі кампанія objective">
+                    <div class="card-head">
+                        <span class="card-icon">🎯</span>
+                        <h3>Цілі кампаній (Objectives)</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>Awareness</strong> — охоплення нової аудиторії. CPM найнижчий.</li>
+                        <li><strong>Traffic</strong> — кліки на сайт або лендинг. Оптимізує під Link Clicks або Landing
+                            Page Views.</li>
+                        <li><strong>Engagement</strong> — лайки, коменти, підписки. Для прогріву.</li>
+                        <li><strong>Leads</strong> — Lead Form або Instant Form всередині FB. Не потребує сайту.</li>
+                        <li><strong>App Promotion</strong> — встановлення додатку.</li>
+                        <li><strong>Sales</strong> — покупки, конверсії на сайті. Потребує Піксель + подія Purchase.
+                        </li>
+                    </ul>
+                    <div class="tip">💡 Для ecom з хорошим пікселем — завжди Sales/Conversions. Traffic дешевший, але не
+                        оптимізує під покупця.</div>
+                </div>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Аудиторії</h2>
+
+                <div class="card" data-tags="meta аудиторія lookalike схожа">
+                    <div class="card-head">
+                        <span class="card-icon">👥</span>
+                        <h3>Lookalike (схожі аудиторії)</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Lookalike 1% — найближча до джерела, менша за розміром, якісніша.</li>
+                        <li>Lookalike 2–5% — ширша, більше охоплення, менша точність.</li>
+                        <li>Найкращі джерела для LAL: покупці, LTV-топ клієнти, люди що додали в кошик, відвідувачі
+                            ключових сторінок.</li>
+                        <li>Мінімум для якісного LAL: 1000 людей у Custom Audience-джерелі. Оптимально — 5000+.</li>
+                    </ul>
+                    <div class="tip">💡 LAL від покупців завжди перебиває LAL від просто відвідувачів. Сегментуй
+                        джерело.</div>
+                </div>
+
+                <div class="card" data-tags="meta custom audience ретаргет ремаркетинг">
+                    <div class="card-head">
+                        <span class="card-icon">🔁</span>
+                        <h3>Custom Audiences (ретаргет)</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>Website</strong> — всі відвідувачі, сторінки, події (AddToCart, Purchase).</li>
+                        <li><strong>Customer List</strong> — завантаження бази email/телефонів. Збіг ~50–60% у хорошому
+                            списку.</li>
+                        <li><strong>App Activity</strong> — дії всередині додатку.</li>
+                        <li><strong>Video</strong> — ті, хто переглянули 25/50/75/95% відео. Теплий сегмент.</li>
+                        <li><strong>Instagram / Facebook Page</strong> — взаємодіяли з профілем: відвідали, написали,
+                            натиснули CTA.</li>
+                        <li><strong>Lead Form</strong> — відкрили або заповнили форму.</li>
+                    </ul>
+                    <div class="tip">💡 Вікно аудиторії: 7 днів — гарячий ретаргет. 30–60 днів — тепла аудиторія. 180
+                        днів — нагадування.</div>
+                </div>
+
+                <div class="card" data-tags="meta broad interest детальний таргетинг">
+                    <div class="card-head">
+                        <span class="card-icon">🌐</span>
+                        <h3>Широкий таргетинг vs Інтереси</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>Broad (широкий)</strong> — тільки стать/вік/гео. Алгоритм сам знаходить аудиторію.
+                            Добре працює при наявності даних пікселя.</li>
+                        <li><strong>Детальний таргетинг</strong> — інтереси, поведінка, демографія. Потрібен для нових
+                            рекламодавців і ніш без піксельних даних.</li>
+                        <li>Стекування інтересів через AND — звужує. Через OR (кілька доданих) — розширює.</li>
+                    </ul>
+                    <div class="tip">💡 При бюджеті 50$+/день і 50+ конверсіях на місяць — тестуй broad. Алгоритм
+                        навчився краще людей.</div>
+                </div>
+
+                <div class="card" data-tags="meta advantage+ shopping аудиторія автоматична">
+                    <div class="card-head">
+                        <span class="card-icon">🤖</span>
+                        <h3>Advantage+ Shopping Campaigns</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Повністю автоматизована кампанія Meta для ecom. Сама обирає аудиторію, плейсменти, креативи.
+                        </li>
+                        <li>Потребує: каталог товарів, піксель з подією Purchase, мінімум ~50 покупок/тиждень.</li>
+                        <li>Часто б'є ручні кампанії при достатньому бюджеті і навчених даних.</li>
+                    </ul>
+                    <div class="tip">💡 Запускай паралельно зі звичайними кампаніями і порівнюй. Не вимикай перші 2
+                        тижні навчання.</div>
+                </div>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Піксель та події</h2>
+
+                <div class="card" data-tags="meta піксель pixel відстеження events">
+                    <div class="card-head">
+                        <span class="card-icon">📡</span>
+                        <h3>Meta Pixel — основні події</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><code>PageView</code> — базова подія, фіксується на кожній сторінці.</li>
+                        <li><code>ViewContent</code> — перегляд картки товару чи сторінки продукту.</li>
+                        <li><code>AddToCart</code> — додавання в кошик.</li>
+                        <li><code>InitiateCheckout</code> — початок оформлення.</li>
+                        <li><code>Purchase</code> — покупка. Головна подія для ecom. Передавай value і currency.</li>
+                        <li><code>Lead</code> — заповнення форми.</li>
+                        <li><code>CompleteRegistration</code> — реєстрація.</li>
+                    </ul>
+                    <div class="tip">💡 Перевіряй піксель через Meta Pixel Helper (розширення Chrome) і Events Manager.
+                        Дублі подій руйнують оптимізацію.</div>
+                </div>
+
+                <div class="card" data-tags="meta CAPI conversions api сервер">
+                    <div class="card-head">
+                        <span class="card-icon">🔗</span>
+                        <h3>Conversions API (CAPI)</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Серверна передача подій напряму в Meta — обходить блокувальники реклами і iOS 14+ обмеження.
+                        </li>
+                        <li>Налаштовуй паралельно з пікселем: дедуплікація через <code>event_id</code>.</li>
+                        <li>Підвищує Event Match Quality (EMQ) — чим вищий, тим краще оптимізація.</li>
+                        <li>Мінімально для CAPI: email або телефон клієнта (hashed) + event name + event time.</li>
+                    </ul>
+                    <div class="tip">💡 Без CAPI в 2024+ ти втрачаєш 20–40% подій через iOS/ad blockers. Це критично для
+                        оптимізації.</div>
+                </div>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Оголошення та креативи</h2>
+
+                <div class="card" data-tags="meta creatives формат оголошення рекламний">
+                    <div class="card-head">
+                        <span class="card-icon">🎨</span>
+                        <h3>Формати оголошень</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>Single Image</strong> — найпростіший. Для тесту гіпотез.</li>
+                        <li><strong>Video</strong> — найвищий engagement. Перші 3 секунди вирішують все.</li>
+                        <li><strong>Carousel</strong> — 2–10 карток. Для каталогу, переваг продукту, storytelling.</li>
+                        <li><strong>Collection</strong> — обкладинка + каталог. Тільки мобайл. Для ecom.</li>
+                        <li><strong>Stories/Reels</strong> — вертикальний формат 9:16. Відрізняється плейсментом і
+                            поведінкою аудиторії.</li>
+                        <li><strong>Dynamic Creative</strong> — завантаж кілька заголовків/текстів/зображень, Meta сама
+                            тестує комбінації.</li>
+                    </ul>
+                    <div class="tip">💡 Stories і Reels — окремі оголошення з адаптованим текстом і 9:16 форматом. Не
+                        давай FB авторізрізати горизонтальне відео.</div>
+                </div>
+
+                <div class="card" data-tags="meta текст оголошення копірайтинг headline">
+                    <div class="card-head">
+                        <span class="card-icon">✍️</span>
+                        <h3>Структура тексту оголошення</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>Primary Text</strong> — основний текст. Перші 125 символів видно без "Детальніше".
+                            Зачіпай одразу.</li>
+                        <li><strong>Headline</strong> — під зображенням/відео. Жирний. Конкретна вигода або УТП.</li>
+                        <li><strong>Description</strong> — додаткова строка під Headline. Показується не завжди.</li>
+                        <li>CTA (кнопка): "Купити", "Дізнатись більше", "Записатись", "Отримати пропозицію" — тестуй.
+                        </li>
+                    </ul>
+                    <div class="tip">💡 Формула: Біль → Обіцянка вирішення → Докази/соціальний proof → CTA. Тестуй різні
+                        емоційні тригери.</div>
+                </div>
+
+                <div class="card" data-tags="meta ab тест сплїт тестування">
+                    <div class="card-head">
+                        <span class="card-icon">🧪</span>
+                        <h3>A/B тестування в Meta</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Один параметр за тест: або аудиторія, або креатив, або плейсмент — не все одночасно.</li>
+                        <li>Інструмент "A/B Test" в Ads Manager ділить аудиторію без перетину між групами.</li>
+                        <li>Статистична значущість: потрібно мінімум 50–100 цільових подій на варіант.</li>
+                        <li>Термін тесту: 7–14 днів. Коротше — результати нестабільні.</li>
+                    </ul>
+                    <div class="tip">💡 Спочатку тестуй креативи (найбільший вплив на результат), потім аудиторії, потім
+                        деталі тексту.</div>
+                </div>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Навчання алгоритму</h2>
+
+                <div class="card" data-tags="meta learning phase навчання алгоритм 50 подій">
+                    <div class="card-head">
+                        <span class="card-icon">🧠</span>
+                        <h3>Learning Phase (фаза навчання)</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Кожна нова група оголошень входить у фазу навчання. Результати нестабільні — не вимикай.
+                        </li>
+                        <li>Виходить з Learning після ~50 цільових подій за 7 днів.</li>
+                        <li>Статус: "Активне навчання" → "Активне" → "Обмежене навчання" (мало даних).</li>
+                        <li>Що скидає навчання: зміна бюджету &gt;20%, нові оголошення в групу, зміна аудиторії, зміна
+                            ставок.</li>
+                    </ul>
+                    <div class="tip">💡 Не чіпай кампанію перші 3–5 днів. "Обмежене навчання" — сигнал розширити
+                        аудиторію або збільшити бюджет.</div>
+                </div>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Плейсменти</h2>
+
+                <div class="card" data-tags="meta плейсмент placement facebook instagram audience network">
+                    <div class="card-head">
+                        <span class="card-icon">📱</span>
+                        <h3>Плейсменти Meta</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>Facebook Feed</strong> — основний плейсмент. Найдорожчий CPM, але якісний трафік.
+                        </li>
+                        <li><strong>Instagram Feed</strong> — квадратний або 4:5. Висока конкуренція, молода аудиторія.
+                        </li>
+                        <li><strong>Stories</strong> — FB + IG. 9:16 формат. Ефективний, але потребує окремого креативу.
+                        </li>
+                        <li><strong>Reels</strong> — короткі відео. Зараз Meta активно просуває, CPM нижчий.</li>
+                        <li><strong>Marketplace</strong> — для продажу товарів. Аудиторія з купівельним інтентом.</li>
+                        <li><strong>Audience Network</strong> — сторонні сайти та додатки. Дешевий CPM, але низька
+                            якість. Часто варто вимикати.</li>
+                        <li><strong>Messenger</strong> — в стрічці або в чаті. Для лід-генерації.</li>
+                    </ul>
+                    <div class="tip">💡 Advantage+ Placements (авто) часто краще ручного вибору. Але для тесту —
+                        прибирай Audience Network і дивись на якість трафіку.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== GOOGLE ADS ===================== -->
+        <section class="section" id="section-google">
+            <div class="section-header">
+                <h1>Google Ads</h1>
+                <p>Search, Display, Shopping, YouTube, Performance Max</p>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Типи кампаній</h2>
+
+                <div class="card" data-tags="google search пошук ключові слова">
+                    <div class="card-head">
+                        <span class="card-icon">🔍</span>
+                        <h3>Search (Пошукові кампанії)</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Показ оголошень у відповідь на пошуковий запит. Найвищий intent.</li>
+                        <li>Структура: Кампанія → Група оголошень → Ключові слова + Оголошення.</li>
+                        <li>Типи відповідності: <strong>Broad Match</strong> (широкий), <strong>Phrase Match</strong>
+                            ("фраза"), <strong>Exact Match</strong> ([точний]).</li>
+                        <li>RSA (Responsive Search Ads) — 15 заголовків + 4 описи. Алгоритм сам збирає комбінації.</li>
+                    </ul>
+                    <div class="tip">💡 Починай з Phrase + Exact. Broad тільки при хорошій статистиці і ретельному
+                        мінус-списку.</div>
+                </div>
+
+                <div class="card" data-tags="google display банерна медійна кампанія">
+                    <div class="card-head">
+                        <span class="card-icon">🖼️</span>
+                        <h3>Display (Медійні кампанії)</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Банери на сайтах-партнерах Google. Охоплення 90%+ інтернет-аудиторії.</li>
+                        <li>Responsive Display Ads — завантажуй активи (зображення, логотипи, тексти), Google сам збирає
+                            банери.</li>
+                        <li>Таргетинг: аудиторії інтересів, схожі аудиторії, ремаркетинг, теми сайтів, місця розміщення.
+                        </li>
+                        <li>CPM нижчий за Search, але конверсійність гірша. Добре для прогріву і ремаркетингу.</li>
+                    </ul>
+                    <div class="tip">💡 Display для ремаркетингу — обов'язково. Виключай нерелевантні категорії сайтів і
+                        мобільні ігри з плейсментів.</div>
+                </div>
+
+                <div class="card" data-tags="google shopping товарні кампанії ecom">
+                    <div class="card-head">
+                        <span class="card-icon">🛍️</span>
+                        <h3>Shopping (Товарні кампанії)</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Показ карток товарів з фото + ціна + назва магазину прямо в пошуку.</li>
+                        <li>Потребує: Google Merchant Center + завантажений фід товарів.</li>
+                        <li>Два типи: Standard Shopping (ручне управління) і Smart Shopping (автоматичний, застарів —
+                            замінений PMax).</li>
+                        <li>Оптимізація через якість фіду: title, description, high-res images, ціна, GTIN.</li>
+                    </ul>
+                    <div class="tip">💡 Title товару — найважливіший елемент фіду. Формат: Бренд + Модель + Ключова
+                        характеристика + Тип товару.</div>
+                </div>
+
+                <div class="card" data-tags="google pmax performance max автоматична">
+                    <div class="card-head">
+                        <span class="card-icon">🚀</span>
+                        <h3>Performance Max (PMax)</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Одна кампанія — всі канали Google: Search, Display, YouTube, Gmail, Maps, Discover.</li>
+                        <li>Потребує asset group: тексти, зображення, відео, логотипи, аудиторії (signals).</li>
+                        <li>Audience Signals — підказуєш Google, хто твій клієнт. Не таргетинг, а сигнал.</li>
+                        <li>Мінімум для роботи: 30–50 конверсій на місяць. Без даних — погана оптимізація.</li>
+                        <li>Звітність обмежена — деталі по каналах не видно.</li>
+                    </ul>
+                    <div class="tip">💡 Додавай відео в PMax — інакше Google автоматично генерує своє з твоїх зображень.
+                        Результат зазвичай жахливий.</div>
+                </div>
+
+                <div class="card" data-tags="google youtube відео реклама trueview bumper">
+                    <div class="card-head">
+                        <span class="card-icon">▶️</span>
+                        <h3>YouTube Ads (Video Campaigns)</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>In-stream Skippable</strong> — можна пропустити після 5 сек. Платиш якщо переглянули
+                            30 сек+.</li>
+                        <li><strong>In-stream Non-skippable</strong> — 15 сек обов'язкові. Купується по CPM.</li>
+                        <li><strong>Bumper Ads</strong> — 6 секунд. Ідеально для нагадування і охоплення.</li>
+                        <li><strong>Video Discovery</strong> — відображається в результатах пошуку YouTube і поруч з
+                            відео.</li>
+                        <li>Таргетинг: демографія, інтереси, теми, ключові слова, ремаркетинг, канали/відео.</li>
+                    </ul>
+                    <div class="tip">💡 Перші 5 секунд In-stream — вирішальні. Питання/шок/факт одразу. Без вступу і
+                        "Привіт, я...".</div>
+                </div>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Ключові слова</h2>
+
+                <div class="card" data-tags="google ключові слова match type відповідність">
+                    <div class="card-head">
+                        <span class="card-icon">🗝️</span>
+                        <h3>Типи відповідності ключових слів</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>Broad Match</strong> — <code>кросівки</code> — показ по всіх схожих запитах.
+                            Максимум охоплення, ризик нерелеванту.</li>
+                        <li><strong>Phrase Match</strong> — <code>"купити кросівки"</code> — запит містить фразу, слова
+                            навколо дозволені.</li>
+                        <li><strong>Exact Match</strong> — <code>[купити кросівки nike]</code> — точний запит або
+                            близькі варіанти. Мінімум охоплення, максимум релевантності.</li>
+                    </ul>
+                    <div class="tip">💡 Регулярно переглядай "Пошукові терміни" — там реальні запити користувачів.
+                        Додавай нерелевантні в мінус-список.</div>
+                </div>
+
+                <div class="card" data-tags="google мінус слова negative keywords виключення">
+                    <div class="card-head">
+                        <span class="card-icon">🚫</span>
+                        <h3>Мінус-слова (Negative Keywords)</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Виключають покази по нерелевантних запитах. Економлять бюджет.</li>
+                        <li>Рівні: кампанія або група оголошень. Загальний список можна застосовувати до кількох
+                            кампаній.</li>
+                        <li>Приклади: "безкоштовно", "своїми руками", "відгуки", "фото", назви конкурентів (якщо не
+                            хочеш).</li>
+                        <li>Також типи відповідності: -слово, -"фраза", -[точне].</li>
+                    </ul>
+                    <div class="tip">💡 Перед запуском витрати 1 годину на складання базового мінус-списку. Це заощадить
+                        20–30% бюджету в перший тиждень.</div>
+                </div>
+
+                <div class="card" data-tags="google quality score показник якості релевантність">
+                    <div class="card-head">
+                        <span class="card-icon">⭐</span>
+                        <h3>Quality Score (Показник якості)</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Шкала 1–10. Впливає на ціну кліку і позицію оголошення.</li>
+                        <li>Три компоненти: CTR (очікуваний), релевантність оголошення, досвід на лендингу.</li>
+                        <li>Висока якість = нижча CPC при тій самій позиції.</li>
+                        <li>Підвищення: відповідність ключового слова → тексту оголошення → лендингу. Вся ланцюжок
+                            повинна бути консистентною.</li>
+                    </ul>
+                    <div class="tip">💡 QS 7+ — добре. QS 4 і нижче — переписуй оголошення або розбивай на вужчі групи.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Ставки та бюджети</h2>
+
+                <div class="card" data-tags="google стратегія ставок bidding tCPA tROAS maximize">
+                    <div class="card-head">
+                        <span class="card-icon">📊</span>
+                        <h3>Стратегії ставок</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>Maximize Clicks</strong> — максимум кліків у межах бюджету. Для початку збору даних.
+                        </li>
+                        <li><strong>Maximize Conversions</strong> — максимум конверсій. Потребує мінімум 30
+                            конверсій/міс.</li>
+                        <li><strong>Target CPA (tCPA)</strong> — прагне до заданої вартості конверсії. Для стабільних
+                            кампаній.</li>
+                        <li><strong>Target ROAS (tROAS)</strong> — прагне до заданої рентабельності. Для ecom.</li>
+                        <li><strong>Manual CPC</strong> — ручне управління. Повний контроль, але потребує часу.</li>
+                        <li><strong>Enhanced CPC (eCPC)</strong> — ручна ставка + автоматична корекція Google.</li>
+                    </ul>
+                    <div class="tip">💡 Нова кампанія: Max Clicks 2–3 тижні → накопичи дані → перейди на Max Conversions
+                        → потім tCPA/tROAS.</div>
+                </div>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Розширення оголошень</h2>
+
+                <div class="card" data-tags="google розширення assets extensions sitelink callout">
+                    <div class="card-head">
+                        <span class="card-icon">➕</span>
+                        <h3>Assets (розширення оголошень)</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>Sitelinks</strong> — додаткові посилання під оголошенням. Збільшують площу і CTR.
+                        </li>
+                        <li><strong>Callouts</strong> — короткі переваги: "Безкоштовна доставка", "Гарантія 2 роки".
+                        </li>
+                        <li><strong>Structured Snippets</strong> — переліки: послуги, типи, бренди.</li>
+                        <li><strong>Call</strong> — номер телефону прямо в оголошенні.</li>
+                        <li><strong>Location</strong> — адреса. З'єднується з Google Business Profile.</li>
+                        <li><strong>Price</strong> — блок з цінами послуг/товарів.</li>
+                        <li><strong>Promotion</strong> — акційна пропозиція з датою.</li>
+                        <li><strong>Image</strong> — зображення поруч з Search оголошенням.</li>
+                    </ul>
+                    <div class="tip">💡 Заповнюй всі можливі розширення. Вони безкоштовні, збільшують CTR і займають
+                        більше місця у видачі.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== TIKTOK ADS ===================== -->
+        <section class="section" id="section-tiktok">
+            <div class="section-header">
+                <h1>TikTok Ads</h1>
+                <p>TikTok Ads Manager — нативна реклама у відео</p>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Структура та цілі</h2>
+
+                <div class="card" data-tags="tiktok структура кампанія ad group">
+                    <div class="card-head">
+                        <span class="card-icon">🏗️</span>
+                        <h3>Структура кампаній TikTok</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>Campaign</strong> — ціль і бюджет кампанії.</li>
+                        <li><strong>Ad Group</strong> — аудиторія, плейсмент, бюджет групи, розклад.</li>
+                        <li><strong>Ad</strong> — відео + текст + CTA.</li>
+                        <li>Цілі: Reach, Traffic, Video Views, Lead Generation, Community Interaction, App Promotion,
+                            Conversions, Catalog Sales.</li>
+                    </ul>
+                    <div class="tip">💡 Для більшості задач — Conversions або Traffic. Video Views — якщо мета прогрів
+                        аудиторії.</div>
+                </div>
+
+                <div class="card" data-tags="tiktok аудиторія таргетинг інтереси">
+                    <div class="card-head">
+                        <span class="card-icon">👥</span>
+                        <h3>Таргетинг в TikTok</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>Demographic</strong> — вік, стать, мова, місцезнаходження.</li>
+                        <li><strong>Interest & Behavior</strong> — інтереси, взаємодії з типами контенту, покупки.</li>
+                        <li><strong>Custom Audiences</strong> — дані клієнтів, відвідувачі сайту (піксель), взаємодія з
+                            профілем.</li>
+                        <li><strong>Lookalike</strong> — схожі на Custom Audience.</li>
+                        <li><strong>Automatic Targeting</strong> — система сама знаходить аудиторію. Широкий таргетинг.
+                        </li>
+                    </ul>
+                    <div class="tip">💡 TikTok алгоритм сильніший за Facebook у поширенні нативного контенту. Широкий
+                        таргетинг + якісний креатив часто б'є ручний.</div>
+                </div>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Відеокреативи</h2>
+
+                <div class="card" data-tags="tiktok відео hook перші секунди creative">
+                    <div class="card-head">
+                        <span class="card-icon">🎬</span>
+                        <h3>Hook — перші 3 секунди вирішують все</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Якщо не зачепив за 3 секунди — користувач свайпнув. Гейм овер.</li>
+                        <li>Типи хуків: питання ("Ти знаєш чому...?"), шок-факт, "Стоп, якщо ти...", демонстрація
+                            результату одразу.</li>
+                        <li>Уникай: логотип на початку, довгий вступ, "Привіт, сьогодні розкажу...".</li>
+                        <li>Текстовий оверлей на відео підвищує утримання — дублюй ключові меседжі текстом.</li>
+                    </ul>
+                    <div class="tip">💡 Метрика Hook Rate = (3-sec views) / (Impressions). Норма &gt;30%. Нижче — міняй
+                        початок відео.</div>
+                </div>
+
+                <div class="card" data-tags="tiktok spark ads нативні оголошення існуючий пост">
+                    <div class="card-head">
+                        <span class="card-icon">✨</span>
+                        <h3>Spark Ads</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Просування існуючого органічного поста (свого або чужого) як рекламного оголошення.</li>
+                        <li>Виглядає як звичайний TikTok-пост — без плашки "рекламна публікація" у звичному розумінні.
+                        </li>
+                        <li>Ліки, коменти, підписники зараховуються на реальний акаунт.</li>
+                        <li>Краще залучення ніж звичайні (non-spark) оголошення, бо виглядає нативно.</li>
+                    </ul>
+                    <div class="tip">💡 Тестуй органічний контент спочатку. Відео що зайшло органічно — пускай на Spark
+                        Ads. Вже є proof of concept.</div>
+                </div>
+
+                <div class="card" data-tags="tiktok специфікації відео розмір формат">
+                    <div class="card-head">
+                        <span class="card-icon">📐</span>
+                        <h3>Технічні вимоги до відео</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Формат: 9:16 (вертикальний) — обов'язково. 1:1 і 16:9 — можливо, але гірше.</li>
+                        <li>Розмір: мінімум 540×960px. Рекомендовано 1080×1920px.</li>
+                        <li>Тривалість: 5–60 сек для In-Feed. Оптимально 15–30 сек.</li>
+                        <li>Формати: MP4, MOV, AVI, GIF. Розмір до 500MB.</li>
+                        <li>Безпечна зона для тексту/логотипу: уникай низу (кнопки) і правого краю (профіль).</li>
+                    </ul>
+                </div>
+
+                <div class="card" data-tags="tiktok pixel піксель відстеження конверсії">
+                    <div class="card-head">
+                        <span class="card-icon">📡</span>
+                        <h3>TikTok Pixel та Events</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Встановлюється через Events Manager в TikTok Ads Manager.</li>
+                        <li>Стандартні події: ViewContent, AddToCart, InitiateCheckout, PlaceAnOrder, CompletePayment,
+                            Contact, SubmitForm.</li>
+                        <li>Events API (серверна інтеграція) — аналог Meta CAPI. Підвищує точність відстеження.</li>
+                        <li>Перевірка: TikTok Pixel Helper (розширення Chrome).</li>
+                    </ul>
+                    <div class="tip">💡 TikTok Attribution: за замовчуванням 7-day click, 1-day view. Можна змінити в
+                        налаштуваннях кампанії.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== МЕТРИКИ ===================== -->
+        <section class="section" id="section-metrics">
+            <div class="section-header">
+                <h1>Метрики</h1>
+                <p>KPI, норми та формули розрахунку</p>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Основні метрики</h2>
+
+                <div class="card" data-tags="метрики CTR CPM CPC CPL CPA ROAS ROI формули">
+                    <div class="card-head">
+                        <span class="card-icon">📐</span>
+                        <h3>Формули ключових метрик</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <div class="formula-grid">
+                        <div class="formula-item">
+                            <span class="formula-name">CTR</span>
+                            <span class="formula-eq">Кліки / Покази × 100%</span>
+                        </div>
+                        <div class="formula-item">
+                            <span class="formula-name">CPM</span>
+                            <span class="formula-eq">Витрати / Покази × 1000</span>
+                        </div>
+                        <div class="formula-item">
+                            <span class="formula-name">CPC</span>
+                            <span class="formula-eq">Витрати / Кліки</span>
+                        </div>
+                        <div class="formula-item">
+                            <span class="formula-name">CPL</span>
+                            <span class="formula-eq">Витрати / Ліди</span>
+                        </div>
+                        <div class="formula-item">
+                            <span class="formula-name">CPA</span>
+                            <span class="formula-eq">Витрати / Конверсії</span>
+                        </div>
+                        <div class="formula-item">
+                            <span class="formula-name">ROAS</span>
+                            <span class="formula-eq">Дохід / Витрати на рекламу</span>
+                        </div>
+                        <div class="formula-item">
+                            <span class="formula-name">ROI</span>
+                            <span class="formula-eq">(Прибуток − Витрати) / Витрати × 100%</span>
+                        </div>
+                        <div class="formula-item">
+                            <span class="formula-name">CR (CVR)</span>
+                            <span class="formula-eq">Конверсії / Кліки × 100%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-tags="метрики норми орієнтири benchmark">
+                    <div class="card-head">
+                        <span class="card-icon">📏</span>
+                        <h3>Орієнтири (бенчмарки) по нішах</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>CTR Facebook Feed:</strong> 0.9–1.5% — норма. 2%+ — добре. Нижче 0.5% — міняй
+                            креатив.</li>
+                        <li><strong>CTR Google Search:</strong> 3–7% — норма. 10%+ — відмінно.</li>
+                        <li><strong>CVR ecom (лендинг):</strong> 1–3% — норма. 5%+ — добре.</li>
+                        <li><strong>CVR лід-форма Meta:</strong> 10–20% — норма.</li>
+                        <li><strong>ROAS ecom:</strong> 3–4x — беззбитковість (залежить від маржі). 6–8x — добре.</li>
+                        <li><strong>CPM Facebook (Україна):</strong> $1–5 — норма (залежить від ніші і конкуренції).
+                        </li>
+                    </ul>
+                    <div class="tip">💡 Бенчмарки — орієнтир, не абсолют. Порівнюй свої метрики в динаміці і між собою,
+                        а не тільки з галуззю.</div>
+                </div>
+
+                <div class="card" data-tags="метрики frequency частота охоплення reach">
+                    <div class="card-head">
+                        <span class="card-icon">🔄</span>
+                        <h3>Frequency (Частота) та Reach (Охоплення)</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>Frequency</strong> = Покази / Охоплення. Скільки разів одна людина побачила рекламу.
+                        </li>
+                        <li>Frequency 1.5–3 — норма для конверсійних кампаній.</li>
+                        <li>Frequency 4–6 — аудиторія "втомлюється", CTR падає, CPC зростає. Час оновлювати креатив або
+                            розширяти аудиторію.</li>
+                        <li>Для ретаргету — допустима вища частота (4–7), бо аудиторія тепла.</li>
+                    </ul>
+                    <div class="tip">💡 При CPM що різко зростає при стабільному бюджеті — перевір Frequency. Аудиторія
+                        вичерпалась.</div>
+                </div>
+
+                <div class="card" data-tags="атрибуція attribution вікно click view">
+                    <div class="card-head">
+                        <span class="card-icon">🕰️</span>
+                        <h3>Атрибуція (Attribution Window)</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>1-day click</strong> — конверсія зарахована якщо сталась протягом 1 дня після кліку.
+                        </li>
+                        <li><strong>7-day click</strong> — 7 днів після кліку. Стандарт для більшості.</li>
+                        <li><strong>1-day view</strong> — конверсія після перегляду оголошення (без кліку). Спірна, але
+                            враховує впізнаваність.</li>
+                        <li>Meta за замовчуванням: 7-day click + 1-day view.</li>
+                        <li>Google за замовчуванням: 30-day click для більшості типів конверсій.</li>
+                    </ul>
+                    <div class="tip">💡 Більше вікно атрибуції = більше зарахованих конверсій = краще виглядає кампанія.
+                        Для порівняння платформ між собою — уніфікуй вікна.</div>
+                </div>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Аналіз та оптимізація</h2>
+
+                <div class="card" data-tags="аналіз рекламний кабінет звіт розбивка breakdown">
+                    <div class="card-head">
+                        <span class="card-icon">🔬</span>
+                        <h3>Розбивки (Breakdowns) в аналізі</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><strong>By Age/Gender</strong> — яка демографія конвертує краще. Коригуй ставки або виключай
+                            неефективних.</li>
+                        <li><strong>By Placement</strong> — який плейсмент дає кращий CPA. Відключай збиткові.</li>
+                        <li><strong>By Device</strong> — мобайл vs десктоп. Різна поведінка, різні CR.</li>
+                        <li><strong>By Time</strong> — по годинах і днях тижня. Для налаштування розкладу показів.</li>
+                        <li><strong>By Region</strong> — які регіони дають продажі, а які тільки їдять бюджет.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== ЧЕКЛІСТИ ===================== -->
+        <section class="section" id="section-checklists">
+            <div class="section-header">
+                <h1>Чеклісти</h1>
+                <p>Покрокові алгоритми для запуску та аналізу</p>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Запуск кампанії Meta Ads</h2>
+                <div class="card" data-tags="чеклист meta запуск старт">
+                    <div class="card-head">
+                        <span class="card-icon">✅</span>
+                        <h3>Перед запуском Meta кампанії</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <div class="checklist" id="checklist-meta-launch">
+                        <label><input type="checkbox"> Піксель встановлений і передає події коректно (перевір через
+                            Pixel Helper)</label>
+                        <label><input type="checkbox"> Ціль кампанії відповідає бізнес-задачі</label>
+                        <label><input type="checkbox"> Аудиторії налаштовані (cold + ретаргет окремо)</label>
+                        <label><input type="checkbox"> Виключена аудиторія вже покупців (для cold кампаній)</label>
+                        <label><input type="checkbox"> Мінімум 3–5 варіантів креативу підготовлено</label>
+                        <label><input type="checkbox"> Тексти оголошень написані для кожного сегменту</label>
+                        <label><input type="checkbox"> Лендинг перевірений на мобайлі і швидкості завантаження</label>
+                        <label><input type="checkbox"> UTM-мітки додані до всіх URL</label>
+                        <label><input type="checkbox"> Бюджет розрахований (мін. 5×CPA/день для навчання)</label>
+                        <label><input type="checkbox"> Плейсменти обрані відповідно до стратегії</label>
+                        <label><input type="checkbox"> Ліміти витрат встановлені (Account Spending Limit)</label>
+                        <label><input type="checkbox"> Спосіб оплати підтверджений і має баланс</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Запуск кампанії Google Ads</h2>
+                <div class="card" data-tags="чеклист google запуск старт">
+                    <div class="card-head">
+                        <span class="card-icon">✅</span>
+                        <h3>Перед запуском Google кампанії</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <div class="checklist" id="checklist-google-launch">
+                        <label><input type="checkbox"> Google Tag / Conversion Tracking налаштований і
+                            перевірений</label>
+                        <label><input type="checkbox"> Google Analytics 4 підключений і передає дані</label>
+                        <label><input type="checkbox"> Ключові слова зібрані і розбиті по групах</label>
+                        <label><input type="checkbox"> Мінус-список складений і завантажений</label>
+                        <label><input type="checkbox"> Тип відповідності обраний свідомо</label>
+                        <label><input type="checkbox"> RSA оголошення з 15 заголовків і 4 описи написані</label>
+                        <label><input type="checkbox"> Всі розширення (assets) заповнені</label>
+                        <label><input type="checkbox"> Стратегія ставок відповідає наявності конверсійних даних</label>
+                        <label><input type="checkbox"> Гео і мова налаштовані коректно</label>
+                        <label><input type="checkbox"> Розклад показів перевірений</label>
+                        <label><input type="checkbox"> Лендинг релевантний ключовим словам</label>
+                        <label><input type="checkbox"> UTM-мітки у всіх URL</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Щотижневий аналіз</h2>
+                <div class="card" data-tags="чеклист аналіз тиждень оптимізація">
+                    <div class="card-head">
+                        <span class="card-icon">📋</span>
+                        <h3>Щотижневий аудит рекламних кампаній</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <div class="checklist" id="checklist-weekly">
+                        <label><input type="checkbox"> Перевірити витрати vs план</label>
+                        <label><input type="checkbox"> Переглянути CPA / ROAS по кожній кампанії</label>
+                        <label><input type="checkbox"> Відключити оголошення з поганими метриками (CTR нижче порогу,
+                            висока CPA)</label>
+                        <label><input type="checkbox"> Перевірити Frequency — якщо 5+, оновити креатив</label>
+                        <label><input type="checkbox"> Переглянути пошукові терміни (Google) і додати
+                            мінус-слова</label>
+                        <label><input type="checkbox"> Перевірити статус навчання груп оголошень</label>
+                        <label><input type="checkbox"> Проаналізувати розбивки: вік/стать, плейсмент, девайс</label>
+                        <label><input type="checkbox"> Перевірити якість лідів / конверсій з відділом продажів</label>
+                        <label><input type="checkbox"> Зафіксувати результати тижня в таблицю звіту</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Онбординг нового клієнта</h2>
+                <div class="card" data-tags="чеклист клієнт онбординг брифінг">
+                    <div class="card-head">
+                        <span class="card-icon">🤝</span>
+                        <h3>Що зробити при старті з новим клієнтом</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <div class="checklist" id="checklist-client">
+                        <label><input type="checkbox"> Заповнений бриф: продукт, ЦА, конкуренти, УТП, середній
+                            чек</label>
+                        <label><input type="checkbox"> Отримати доступи: рекламний кабінет, БМ, Analytics, сайт</label>
+                        <label><input type="checkbox"> Перевірити стан піксель/теги — чи коректно працюють</label>
+                        <label><input type="checkbox"> Аудит попередніх кампаній (якщо є)</label>
+                        <label><input type="checkbox"> Аналіз конкурентів в рекламній бібліотеці Facebook</label>
+                        <label><input type="checkbox"> Погодити KPI і бюджет на перший місяць</label>
+                        <label><input type="checkbox"> Погодити формат і частоту звітності</label>
+                        <label><input type="checkbox"> Підготувати технічне завдання для клієнта (що потрібно від
+                            нього)</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== ЛАЙФХАКИ ===================== -->
+        <section class="section" id="section-lifehacks">
+            <div class="section-header">
+                <h1>Лайфхаки</h1>
+                <p>Фішки, нюанси та неочевидні прийоми</p>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Meta Ads — фішки</h2>
+
+                <div class="card" data-tags="лайфхак meta фішка трюк порада">
+                    <div class="card-head">
+                        <span class="card-icon">💎</span>
+                        <h3>Бібліотека реклами Facebook — безкоштовна розвідка</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <p>Заходь на <code>facebook.com/ads/library</code> і шукай рекламу будь-якого конкурента. Бачиш всі
+                        активні оголошення, тексти, відео, дату запуску. Це безкоштовний конкурентний аналіз.</p>
+                    <div class="tip">💡 Фільтруй по "Active" і сортуй по даті. Оголошення що висять довго — очевидно,
+                        конвертують. Це твоє дослідження аудиторії.</div>
+                </div>
+
+                <div class="card" data-tags="лайфхак meta post id оголошення тест">
+                    <div class="card-head">
+                        <span class="card-icon">🔗</span>
+                        <h3>Один пост — кілька Ad Sets (Post ID)</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <p>Щоб соціальний proof (лайки, коменти) акумулювався на одному оголошенні при тестуванні різних
+                        аудиторій — використовуй один і той самий "Page Post" через його ID. В Ads Manager: "Use
+                        existing post" → вводь Post ID.</p>
+                    <div class="tip">💡 100 лайків на одному оголошенні виглядає краще ніж 0 лайків на 10 копіях.
+                        Конверсійність вища.</div>
+                </div>
+
+                <div class="card" data-tags="лайфхак meta виключення overlap перетин аудиторій">
+                    <div class="card-head">
+                        <span class="card-icon">⚠️</span>
+                        <h3>Перетин аудиторій — як уникнути</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Якщо дві групи оголошень таргетуються на схожу аудиторію — вони конкурують між собою на
+                            аукціоні і здорожують один одному ціну.</li>
+                        <li>Перевіряй перетин: Audiences → виділи дві аудиторії → "Show Audience Overlap".</li>
+                        <li>Вирішення: виключай вже охоплені аудиторії, або об'єднуй в одну групу.</li>
+                    </ul>
+                </div>
+
+                <div class="card" data-tags="лайфхак meta ios14 ios відстеження атрибуція">
+                    <div class="card-head">
+                        <span class="card-icon">📱</span>
+                        <h3>iOS 14+ і що з цим робити</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Після iOS 14 Apple дозволяє відстежувати лише тих користувачів, що дали дозвіл (App Tracking
+                            Transparency). Більшість відмовляють.</li>
+                        <li>Наслідки: менше даних у пікселі, гірша оптимізація, завищені метрики в Analytics (менше
+                            атрибутованих конверсій).</li>
+                        <li>Що робити: CAPI (серверна передача), верифікація домену в Business Manager, налаштування
+                            агрегованих подій.</li>
+                        <li>Верифікація домену: Business Settings → Brand Safety → Domains.</li>
+                    </ul>
+                </div>
+
+                <div class="card" data-tags="лайфхак meta naming конвенція назва кампанія">
+                    <div class="card-head">
+                        <span class="card-icon">🏷️</span>
+                        <h3>Naming convention — стандарт іменування</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <p>Стандарт іменування рятує при роботі з кількома кампаніями. Приклад:</p>
+                    <ul>
+                        <li><strong>Кампанія:</strong> <code>[Клієнт]_[Ціль]_[Аудиторія]_[Дата]</code></li>
+                        <li><strong>Група:</strong> <code>[Аудиторія/Сегмент]_[Гео]_[Бюджет]</code></li>
+                        <li><strong>Оголошення:</strong> <code>[Формат]_[Креатив#]_[Тест-параметр]</code></li>
+                    </ul>
+                    <div class="tip">💡 Приклад: <code>Nike_Conversions_LAL1%_Cold_2024-11</code> → одразу зрозуміло що
+                        і навіщо.</div>
+                </div>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Google Ads — фішки</h2>
+
+                <div class="card" data-tags="лайфхак google auction insights конкуренти">
+                    <div class="card-head">
+                        <span class="card-icon">🔎</span>
+                        <h3>Auction Insights — аналіз конкурентів</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <p>В Google Ads: Campaigns → виділи кампанію → "Auction Insights". Побачиш конкурентів на тих самих
+                        аукціонах: Impression Share, Overlap Rate, Position Above Rate, Top of Page Rate.</p>
+                    <div class="tip">💡 Impression Share нижче 50% — ти програєш аукціон. Або підвищуй ставки/QS, або
+                        розширюй бюджет.</div>
+                </div>
+
+                <div class="card" data-tags="лайфхак google scripts автоматизація скрипти">
+                    <div class="card-head">
+                        <span class="card-icon">⚙️</span>
+                        <h3>Google Ads Scripts — автоматизація</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Безкоштовна автоматизація через JavaScript скрипти в кабінеті.</li>
+                        <li>Популярні use cases: щотижневий звіт в Google Sheets, пауза оголошень при закінченні товару,
+                            сповіщення про різкий ріст CPA.</li>
+                        <li>Знайти готові скрипти: Google Ads Scripts Library, solutions.google.com/ads.</li>
+                    </ul>
+                </div>
+
+                <div class="card" data-tags="лайфхак google broad match smart bidding">
+                    <div class="card-head">
+                        <span class="card-icon">🌊</span>
+                        <h3>Broad Match + Smart Bidding = потужна комбінація</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <p>Google офіційно рекомендує комбінацію: Broad Match ключових слів + автоматичні ставки (tCPA або
+                        tROAS) + RSA оголошення. Алгоритм з достатньою кількістю конверсійних даних знаходить нові
+                        ефективні запити краще ручного підбору.</p>
+                    <div class="tip">💡 Умова: мінімум 50–100 конверсій/місяць. Без даних — Broad Match це злив бюджету.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-group">
+                <h2 class="group-title">Загальні фішки</h2>
+
+                <div class="card" data-tags="лайфхак utm мітки відстеження google analytics">
+                    <div class="card-head">
+                        <span class="card-icon">🔖</span>
+                        <h3>UTM-мітки — обов'язковий мінімум</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li><code>utm_source</code> — джерело: facebook, google, tiktok</li>
+                        <li><code>utm_medium</code> — канал: cpc, paid_social</li>
+                        <li><code>utm_campaign</code> — назва кампанії</li>
+                        <li><code>utm_content</code> — конкретне оголошення або креатив</li>
+                        <li><code>utm_term</code> — ключове слово (для Google Search)</li>
+                    </ul>
+                    <p>Приклад:
+                        <code>?utm_source=facebook&utm_medium=cpc&utm_campaign=retarget_cart&utm_content=video_v2</code>
+                    </p>
+                    <div class="tip">💡 Використовуй Google Campaign URL Builder для генерації. Без UTM — не знаєш
+                        звідки реально прийшла покупка.</div>
+                </div>
+
+                <div class="card" data-tags="лайфхак бюджет масштабування scaling">
+                    <div class="card-head">
+                        <span class="card-icon">📈</span>
+                        <h3>Як правильно масштабувати бюджет</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Правило: збільшуй бюджет не більше ніж на 15–20% за раз. Різкий стрибок скидає навчання
+                            алгоритму.</li>
+                        <li>Горизонтальне масштабування: дублюй успішні Ad Sets на нові аудиторії.</li>
+                        <li>Вертикальне масштабування: поступово збільшуй бюджет успішної кампанії.</li>
+                        <li>Новий рекламний акаунт: починай з меншого бюджету, акаунт "довіри" набирається поступово.
+                        </li>
+                    </ul>
+                    <div class="tip">💡 Масштабуй тільки те, що вже конвертує. "Гарна" CTR без конверсій — не привід
+                        збільшувати бюджет.</div>
+                </div>
+
+                <div class="card" data-tags="лайфхак landing page лендинг конверсія швидкість">
+                    <div class="card-head">
+                        <span class="card-icon">🏎️</span>
+                        <h3>Лендинг — часто недооцінений фактор</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Швидкість завантаження: кожна секунда затримки = -7% конверсій. Перевіряй через PageSpeed
+                            Insights.</li>
+                        <li>Мобайл: 70%+ трафіку з реклами — мобайл. Якщо лендинг "ломається" на телефоні, всі решта
+                            зусилля марні.</li>
+                        <li>Message match: текст оголошення → заголовок лендингу повинні кореспондувати. Посетитель має
+                            відчути що попав туди куди очікував.</li>
+                        <li>Одна ціль на лендинг. Не три кнопки CTA, не меню з 10 пунктів.</li>
+                    </ul>
+                </div>
+
+                <div class="card" data-tags="лайфхак creative fatigue втома від реклами оновлення">
+                    <div class="card-head">
+                        <span class="card-icon">😴</span>
+                        <h3>Creative Fatigue — втома аудиторії від креативу</h3>
+                        <button class="bookmark-btn" aria-label="Додати в закладки">☆</button>
+                    </div>
+                    <ul>
+                        <li>Симптоми: CTR падає, CPM росте, CPA погіршується при незмінній аудиторії.</li>
+                        <li>Коли оновлювати: Frequency 4+, або CTR впав на 30%+ від початкового.</li>
+                        <li>Як оновлювати: змінюй hook відео або перше зображення, переписуй заголовок, тестуй новий
+                            формат (зображення → відео).</li>
+                        <li>Профілактика: мати в ротації 3–5 різних креативів одночасно.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BOOKMARKS MODAL -->
+    <div class="modal-overlay" id="bookmarksModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Закладки</h2>
+                <button class="btn-icon modal-close" id="bookmarksClose">✕</button>
+            </div>
+            <div class="modal-body" id="bookmarksList">
+                <p class="empty-state">Додай картку в закладки — натисни ☆</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEARCH RESULTS OVERLAY -->
+    <div class="search-results" id="searchResults" style="display:none"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
